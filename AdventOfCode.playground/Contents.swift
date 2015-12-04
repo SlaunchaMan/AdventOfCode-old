@@ -21,7 +21,7 @@ let Day2Result = Day2Input.characters.split { $0 == "\n" }
     .flatMap(BoxSize.init)
     .reduce(0) { $0 + $1.requiredPaperSize }
 
-print(Day2Result)
+Day2Result
 
 let Day2Part2Example1 = BoxSize(string: "2x3x4")?.requiredRibbonLength
 let Day2Part2Example2 = BoxSize(string: "1x1x10")?.requiredRibbonLength
@@ -31,7 +31,7 @@ let Day2Part2Result = Day2Input.characters.split { $0 == "\n" }
     .flatMap(BoxSize.init)
     .reduce(0) { $0 + $1.requiredRibbonLength }
 
-print(Day2Part2Result)
+Day2Part2Result
 
 let Day3Example1 = DeliverPresents(">")
 let Day3Example2 = DeliverPresents("^>v<")
