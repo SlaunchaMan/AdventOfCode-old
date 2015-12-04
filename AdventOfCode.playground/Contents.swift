@@ -1,6 +1,7 @@
 //: Playground - noun: a place where people can play
 
-import Cocoa
+import Foundation
+import MD5Digest
 
 let Day1Examples = ["(())", "()()", "(((", "(()(()(", "))(((((", "())", "))(", ")))", ")())())"]
     .map { "The input \($0) results in floor \(endingFloorFromInput($0))" }

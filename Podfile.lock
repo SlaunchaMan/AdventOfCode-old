@@ -1,0 +1,10 @@
+PODS:
+  - MD5Digest (1.0.2)
+
+DEPENDENCIES:
+  - MD5Digest
+
+SPEC CHECKSUMS:
+  MD5Digest: b6d6b4b640a379c611d9828fe8f0e45dbaf88d2c
+
+COCOAPODS: 0.39.0
