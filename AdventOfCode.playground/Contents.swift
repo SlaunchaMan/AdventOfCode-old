@@ -42,3 +42,28 @@ let Day3Example3 = DeliverPresents("^v^v^v^v^v")
 let Day3Result = DeliverPresents(Day3Input).count
 
 let Day3Part2Example1 = DeliverPresents(Day3Input, numberOfSantas: 2).count
+
+// Day 4 has to be in this file, thanks to rdar://23756130. May move
+// to pages instead.
+let Day4Input = "yzbqklnj"
+
+func AdventCoinNumber(input: String, numberOfZeros zeros: Int = 5) -> Int? {
+    let prefix = Array<String>(count: zeros, repeatedValue: "0")
+        .joinWithSeparator("")
+    
+    for i in 0 ..< Int.max {
+        let candidate = (input + String(i)) as NSString
+        let candidateHash = candidate.MD5Digest()
+        if candidateHash.hasPrefix(prefix) {
+            return i
+        }
+    }
+    
+    return nil
+}
+
+//let Day4Example1 = AdventCoinNumber("abcdef")
+//let Day4Example2 = AdventCoinNumber("pqrstuv")
+
+//let Day4Result = AdventCoinNumber(Day4Input)
+//let Day4Part2Result = AdventCoinNumber(Day4Input, numberOfZeros: 6)

@@ -1,4 +1,4 @@
-platform :ios, '9'
+platform :ios, '9.0'
 
 source 'https://github.com/CocoaPods/Specs.git'
 
